@@ -7,7 +7,6 @@ class CreateDailylogs < ActiveRecord::Migration
       t.string :duration
       t.text :notes
       t.text :comments
-      t.integer :workout_id
 
       t.timestamps null: false
     end
