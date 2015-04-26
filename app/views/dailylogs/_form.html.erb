@@ -1,0 +1,45 @@
+<%= form_for(@dailylog) do |f| %>
+  <% if @dailylog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@dailylog.errors.count, "error") %> prohibited this dailylog from being saved:</h2>
+
+      <ul>
+      <% @dailylog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :performance %><br>
+    <%= f.text_field :performance %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br>
+    <%= f.date_select :day %>
+  </div>
+  <div class="field">
+    <%= f.label :distance %><br>
+    <%= f.text_field :distance %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.text_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br>
+    <%= f.text_area :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :workout_id %><br>
+    <%= f.number_field :workout_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

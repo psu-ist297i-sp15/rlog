@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Performance:</strong>
+  <%= @dailylog.performance %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @dailylog.day %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @dailylog.distance %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @dailylog.duration %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @dailylog.notes %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @dailylog.comments %>
+</p>
+
+<p>
+  <strong>Workout:</strong>
+  <%= @dailylog.workout_id %>
+</p>
+
+<%= link_to 'Edit', edit_dailylog_path(@dailylog) %> |
+<%= link_to 'Back', dailylogs_path %>

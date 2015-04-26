@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Dailylogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Performance</th>
+      <th>Day</th>
+      <th>Distance</th>
+      <th>Duration</th>
+      <th>Notes</th>
+      <th>Comments</th>
+      <th>Workout</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dailylogs.each do |dailylog| %>
+      <tr>
+        <td><%= dailylog.performance %></td>
+        <td><%= dailylog.day %></td>
+        <td><%= dailylog.distance %></td>
+        <td><%= dailylog.duration %></td>
+        <td><%= dailylog.notes %></td>
+        <td><%= dailylog.comments %></td>
+        <td><%= dailylog.workout_id %></td>
+        <td><%= link_to 'Show', dailylog %></td>
+        <td><%= link_to 'Edit', edit_dailylog_path(dailylog) %></td>
+        <td><%= link_to 'Destroy', dailylog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dailylog', new_dailylog_path %>
