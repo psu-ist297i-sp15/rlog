@@ -8,8 +8,9 @@
   <style>
     #name_error { display: none; }
   </style>
-  <script>
-$(document).ready(function() {
+  <%# yield :validation_js %>
+<script>
+  $(document).ready(function() {
   $("#workout_name").on("blur", function() {
     var valid = true;
     $.ajax({
@@ -29,7 +30,8 @@ $(document).ready(function() {
     });
   });    
 });
-  </script>
+</script>
+
 </head>
 <body>
 

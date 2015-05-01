@@ -28,7 +28,7 @@ class DailylogsController < ApplicationController
 
     respond_to do |format|
       if @dailylog.save
-        format.html { redirect_to @dailylog, notice: 'Dailylog was successfully created.' }
+        format.html { redirect_to dailylogs_path, notice: 'Dailylog was successfully created.' }
         format.json { render :show, status: :created, location: @dailylog }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class DailylogsController < ApplicationController
   def update
     respond_to do |format|
       if @dailylog.update(dailylog_params)
-        format.html { redirect_to @dailylog, notice: 'Dailylog was successfully updated.' }
+        format.html { redirect_to dailylogs_path, notice: 'Dailylog was successfully updated.' }
         format.json { render :show, status: :ok, location: @dailylog }
       else
         format.html { render :edit }
